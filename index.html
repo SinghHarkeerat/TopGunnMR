@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Gun: Maverick Review</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1e293b;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #f8fafc;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      animation: fadeIn 1.5s ease-in forwards;
+      opacity: 0;
+    }
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #0f172a;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+    h2 {
+      font-size: 24px;
+      margin-top: 30px;
+      color: #0284c7;
+    }
+    .poster {
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s;
+    }
+    .poster:hover {
+      transform: scale(1.05);
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .flex-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    @media(min-width: 768px) {
+      .flex-row {
+        flex-direction: row;
+      }
+    }
+    .text {
+      flex: 1;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .rating {
+      font-size: 20px;
+      font-weight: bold;
+      color: #10b981;
+      margin-top: 10px;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes pulse {
+      0%, 100% {
+        text-shadow: 0 0 8px #0ea5e9;
+      }
+      50% {
+        text-shadow: 0 0 16px #0ea5e9;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Top Gun: Maverick</h1>
+    <div class="flex-row">
+      <img class="poster" src="/balls.webp" alt="Top Gun: Maverick Poster">
+      <div class="text">
+        <h2>Writing</h2>
+        <p>The writing in Top Gun: Maverick is simple and emotional. It brings back the feeling of the original movie while also telling a new story. The characters feel more real, especially Maverick and Rooster. You understand what they are going through, and the bond between them is easy to connect with. The story has a nice balance of action, emotion, and personal growth. It talks about dealing with the past and finding the courage to move forward. The writing keeps things clear and makes you care about the people in the film. Even the side characters have their own small stories, which makes the movie feel fuller and more engaging.</p>
+
+        <h2>Action and Special Effects</h2>
+        <p>This part of the movie is really exciting. The flying scenes are done so well that you feel like you are in the sky with the pilots. Many of the flight scenes were filmed in real jets, and that makes everything look and feel very real. The sound and visuals are both amazing. You hear the roar of the engines and the speed of the jets, and it makes your heart race. The action is easy to follow, and nothing feels fake. It’s one of the best action experiences in any recent movie. The attention to detail in the cockpit shots and the way the camera moves with the planes makes every scene feel alive and powerful. It keeps you at the edge of your seat and makes you want to watch it again.</p>
+
+        <h2>Costume and Makeup</h2>
+        <p>This is one area where the movie doesn’t shine as much. The clothes are fine, but nothing special. The pilot uniforms look real, but they don’t stand out or add much style. Most of the time, everyone looks the same. Makeup is also very basic, and the characters sometimes look plain. A little more color or variety could have made things more interesting. It's not bad, but it could have been better with just a bit more effort in this area. For a movie that looks so good in the air, the style on the ground could have used a bit more life and personality.</p>
+
+        <p class="rating">⭐️⭐️⭐️⭐️½ - A great movie with strong writing and exciting action. Costumes and makeup needed more attention.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Parallax and glow animation for header
+    const header = document.querySelector('h1');
+    let hue = 0;
+    setInterval(() => {
+      hue = (hue + 1) % 360;
+      header.style.textShadow = `0 0 10px hsl(${hue}, 100%, 60%)`;
+    }, 50);
+
+    // Reveal on scroll
+    window.addEventListener("scroll", () => {
+      const container = document.querySelector(".container");
+      const rect = container.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        container.style.opacity = 1;
+      }
+    });
+  </script>
+</body>
+</html>
